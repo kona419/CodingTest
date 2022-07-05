@@ -6,6 +6,7 @@ def solution(s, c):
     for lines in lines[1:]:
         data = lines.split(",")
         data_values.append(data[header_index])
+        data_values = list(map(int,data_values))
     return max(data_values)
 
 
