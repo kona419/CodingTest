@@ -18,3 +18,11 @@ def solution(numbers, target):
   
   # 트리 구조를 활용해 푸는 문제였다. DFS를 사용해서.
   # 원래 랜덤 조합을 이용해서 풀려고 했는데 불가능한 것 같다.
+    
+# 다른     
+from itertools import product
+
+def solution(numbers, target):
+    l = [(x, -x) for x in numbers]
+    s = list(map(sum, product(*l)))
+    return s.count(target)
