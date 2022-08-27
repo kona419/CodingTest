@@ -29,3 +29,17 @@ def solution(number, k):
         
     answer = answer[:-k] if k > 0 else answer
     return ''.join(answer)
+
+# 나중에 해보기
+def solution(number, k):
+    answer = ''
+    number = list(map(int, number))
+    length = len(number)
+    
+    for i in range(length-k-1, 0,-1):
+        num = sorted(number[:-i])     # num에서 큰 값을 pop 해도 numbers는 변화X
+        k = num.pop()
+        answer += "".join(str(k))
+        for j in range()      #만약 k가 number에 있다면 0으로 바꿈
+    
+    return answer
